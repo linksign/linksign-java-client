@@ -44,15 +44,13 @@ import cn.linksign.client.Configuration;
 public class SDKUnitTests {
 	
 	//LinkSign ClientId
-	private static String clientId = "e185c02085b850e2cb88b65e";
+	private static String clientId = "xxxxxxxxxxxxxxxxxxxxx";
 	  //LinkSign Client API cert  
-	  private static String keyPassword = "linksign2016";
+	  private static String keyPassword = "xxxxxx";
 	  //Cert PIN
-	  private static String keyPath = "C:\\Users\\lam\\work\\Xiaoxin\\API用户\\LinkSign\\LinkSignClientAPI.pfx";
-	  private static String testPdf = "C:\\Users\\lam\\work\\tmp\\tpl\\test.pdf";
-//	  private static String testPdf = "C:\\Users\\lam\\work\\tmp\\tpl\\劳动合同.pdf";
+	  private static String keyPath = "C:\\Users\\lam\\work\\LinkSign\\LinkSignClientAPI.pfx";
+	  private static String testPdf = "C:\\Users\\lam\\work\\test.pdf";
 
-	  private static String testHtml = "C:\\Users\\lam\\Desktop\\email_sem-8\\email_sem.html";
 
 	  public static String encodeBase64File(String path)   {
 	    	FileInputStream inputFile = null;
@@ -172,7 +170,7 @@ public class SDKUnitTests {
 		
 	
 		Document document = new Document();
-		document.setDocumentBase64(this.encodeBase64File(testHtml));
+		document.setDocumentBase64(this.encodeBase64File(""));
 		document.setName("Html文档");
 		document.setFileExtension("html");
 		List<Document> documents = new ArrayList<Document>();

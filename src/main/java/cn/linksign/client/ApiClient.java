@@ -1,5 +1,7 @@
 package cn.linksign.client;
 
+ 
+
 import cn.linksign.client.auth.ApiKeyAuth;
 import cn.linksign.client.auth.Authentication;
 import cn.linksign.client.auth.HttpBasicAuth;
@@ -54,11 +56,8 @@ public class ApiClient {
 
   private int statusCode;
   private Map<String, List<String>> responseHeaders;
-  //LinkSign Client API cert  
-  private static String keyPassword = "linksign2016";
-  private static String keyPath = "C:\\Users\\lam\\work\\Xiaoxin\\API”√ªß\\LinkSign\\LinkSignClientAPI.pfx";
-//  private static String trustPath = "C:\\Users\\lam\\Desktop\\linksign.cn_trust.jks";
-//  private static String trustPassword = "12345678";
+  private static String keyPassword = "";
+  private static String keyPath = "";
   private static SslConfigurator sslConfig;
   private DateFormat dateFormat;
    public ApiClient() {
