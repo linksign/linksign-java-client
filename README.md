@@ -152,5 +152,6 @@ android {
 访问此链接需要先安装领签的客户端数字证书。
 * https://api.linksign.cn/v1/debug
 
-# 支持
+# 详细的接口文档和技术支持,请联系我们
+
 * https://www.linksign.cn
