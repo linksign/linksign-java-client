@@ -16,6 +16,7 @@ compile "com.linksign:linksign-java-client:1.0.0"
 ```
 ##Android开发者
 如果编译时发生重复定义错误，请在 build.gradle 加入以下模块
+```
 android {
    packagingOptions {
       pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyReader’
@@ -28,10 +29,11 @@ android {
       pickFirst 'META-INF/services/com.fasterxml.jackson.core.JsonFactory’
    }
 }
+```
 ##其它
 可以下载编译好的JAR包导入你的项目
-*linksign-java-client-1.0.0
-*依赖包
+* linksign-java-client-1.0.0
+* 依赖包
 #使用
 ```
 @Test
