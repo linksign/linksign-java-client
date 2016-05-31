@@ -64,7 +64,7 @@ android {
 		
 		TextCustomField tf = new TextCustomField();
 		tf.setFieldId("Text1");
-		tf.setValue("小信科技");
+		tf.setValue("Linksign");
 		
 		List<TextCustomField> textCustomFields = new ArrayList<TextCustomField>();
 
@@ -91,7 +91,7 @@ android {
 		List<Company> companys = new ArrayList<Company>();
 		Company company = new Company();
 		company.setRecipientIndex("1");
-		company.setOrgName("深圳小信科技有限公司");
+		company.setOrgName("深圳Linksign公司");
 		company.setOrgAuthorizerName("林永X");
 		company.setOrgAuthorizerEmail("35xxx452@qq.com");
 		company.setOrgAuthorizerPhone("138xxxxxxxx");
