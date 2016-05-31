@@ -32,9 +32,11 @@ android {
 ```
 ##其它
 可以下载编译好的JAR包导入你的项目
-* linksign-java-client-1.0.0
-* 依赖包
+* [linksign-java-client-1.0.0](https://github.com/linksign/linksign-java-client/blob/master/target/linksign-java-client-1.0.0.jar)JAR包
+* [相关依赖包](https://github.com/linksign/linksign-java-client/tree/master/target/lib)目录
+
 # 使用
+
 ```
 @Test
     public void CreateDocumentTest()
