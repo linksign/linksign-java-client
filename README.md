@@ -34,7 +34,7 @@ android {
 可以下载编译好的JAR包导入你的项目
 * linksign-java-client-1.0.0
 * 依赖包
-#使用
+# 使用
 ```
 @Test
     public void CreateDocumentTest()
@@ -146,3 +146,9 @@ android {
 		}
     }
 ```
+# 调试工具
+访问此链接需要先安装领签的客户端数字证书。
+* https://api.linksign.cn/v1/debug
+* 
+# 支持
+* https://www.linksign.cn
