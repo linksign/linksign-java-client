@@ -12,21 +12,96 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u5355\u4F4D\u4FE1\u606F")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class Company   {
   
+  private String authorizationLetterImageBase64 = null;
+  private String bankAccountNumber = null;
+  private String bankLocation = null;
+  private String bankName = null;
   private String emailNotice = null;
   private String linksignUserId = null;
   private String orgAuthorizerEmail = null;
+  private String orgAuthorizerIdcardImageBase64 = null;
   private String orgAuthorizerIdcardNumber = null;
   private String orgAuthorizerIdcardType = null;
   private String orgAuthorizerName = null;
   private String orgAuthorizerPhone = null;
+  private String orgIdcardImageBase64 = null;
   private String orgIdcardNumber = null;
   private String orgIdcardType = null;
   private String orgName = null;
+  private String orgSealImageBase64 = null;
   private String recipientIndex = null;
   private String smsNotice = null;
+
+  
+  /**
+   **/
+  public Company authorizationLetterImageBase64(String authorizationLetterImageBase64) {
+    this.authorizationLetterImageBase64 = authorizationLetterImageBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("authorizationLetterImageBase64")
+  public String getAuthorizationLetterImageBase64() {
+    return authorizationLetterImageBase64;
+  }
+  public void setAuthorizationLetterImageBase64(String authorizationLetterImageBase64) {
+    this.authorizationLetterImageBase64 = authorizationLetterImageBase64;
+  }
+
+  
+  /**
+   **/
+  public Company bankAccountNumber(String bankAccountNumber) {
+    this.bankAccountNumber = bankAccountNumber;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("bankAccountNumber")
+  public String getBankAccountNumber() {
+    return bankAccountNumber;
+  }
+  public void setBankAccountNumber(String bankAccountNumber) {
+    this.bankAccountNumber = bankAccountNumber;
+  }
+
+  
+  /**
+   **/
+  public Company bankLocation(String bankLocation) {
+    this.bankLocation = bankLocation;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("bankLocation")
+  public String getBankLocation() {
+    return bankLocation;
+  }
+  public void setBankLocation(String bankLocation) {
+    this.bankLocation = bankLocation;
+  }
+
+  
+  /**
+   **/
+  public Company bankName(String bankName) {
+    this.bankName = bankName;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("bankName")
+  public String getBankName() {
+    return bankName;
+  }
+  public void setBankName(String bankName) {
+    this.bankName = bankName;
+  }
 
   
   /**
@@ -80,6 +155,23 @@ public class Company   {
   }
   public void setOrgAuthorizerEmail(String orgAuthorizerEmail) {
     this.orgAuthorizerEmail = orgAuthorizerEmail;
+  }
+
+  
+  /**
+   **/
+  public Company orgAuthorizerIdcardImageBase64(String orgAuthorizerIdcardImageBase64) {
+    this.orgAuthorizerIdcardImageBase64 = orgAuthorizerIdcardImageBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orgAuthorizerIdcardImageBase64")
+  public String getOrgAuthorizerIdcardImageBase64() {
+    return orgAuthorizerIdcardImageBase64;
+  }
+  public void setOrgAuthorizerIdcardImageBase64(String orgAuthorizerIdcardImageBase64) {
+    this.orgAuthorizerIdcardImageBase64 = orgAuthorizerIdcardImageBase64;
   }
 
   
@@ -155,6 +247,23 @@ public class Company   {
 
   
   /**
+   **/
+  public Company orgIdcardImageBase64(String orgIdcardImageBase64) {
+    this.orgIdcardImageBase64 = orgIdcardImageBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orgIdcardImageBase64")
+  public String getOrgIdcardImageBase64() {
+    return orgIdcardImageBase64;
+  }
+  public void setOrgIdcardImageBase64(String orgIdcardImageBase64) {
+    this.orgIdcardImageBase64 = orgIdcardImageBase64;
+  }
+
+  
+  /**
    * \u5355\u4F4D\u8BC1\u4EF6\u7F16\u53F7
    **/
   public Company orgIdcardNumber(String orgIdcardNumber) {
@@ -209,6 +318,24 @@ public class Company   {
 
   
   /**
+   * The original seal(scan)
+   **/
+  public Company orgSealImageBase64(String orgSealImageBase64) {
+    this.orgSealImageBase64 = orgSealImageBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "The original seal(scan)")
+  @JsonProperty("orgSealImageBase64")
+  public String getOrgSealImageBase64() {
+    return orgSealImageBase64;
+  }
+  public void setOrgSealImageBase64(String orgSealImageBase64) {
+    this.orgSealImageBase64 = orgSealImageBase64;
+  }
+
+  
+  /**
    * \u516C\u53F8\u7D22\u5F15
    **/
   public Company recipientIndex(String recipientIndex) {
@@ -254,23 +381,30 @@ public class Company   {
       return false;
     }
     Company company = (Company) o;
-    return Objects.equals(this.emailNotice, company.emailNotice) &&
+    return Objects.equals(this.authorizationLetterImageBase64, company.authorizationLetterImageBase64) &&
+        Objects.equals(this.bankAccountNumber, company.bankAccountNumber) &&
+        Objects.equals(this.bankLocation, company.bankLocation) &&
+        Objects.equals(this.bankName, company.bankName) &&
+        Objects.equals(this.emailNotice, company.emailNotice) &&
         Objects.equals(this.linksignUserId, company.linksignUserId) &&
         Objects.equals(this.orgAuthorizerEmail, company.orgAuthorizerEmail) &&
+        Objects.equals(this.orgAuthorizerIdcardImageBase64, company.orgAuthorizerIdcardImageBase64) &&
         Objects.equals(this.orgAuthorizerIdcardNumber, company.orgAuthorizerIdcardNumber) &&
         Objects.equals(this.orgAuthorizerIdcardType, company.orgAuthorizerIdcardType) &&
         Objects.equals(this.orgAuthorizerName, company.orgAuthorizerName) &&
         Objects.equals(this.orgAuthorizerPhone, company.orgAuthorizerPhone) &&
+        Objects.equals(this.orgIdcardImageBase64, company.orgIdcardImageBase64) &&
         Objects.equals(this.orgIdcardNumber, company.orgIdcardNumber) &&
         Objects.equals(this.orgIdcardType, company.orgIdcardType) &&
         Objects.equals(this.orgName, company.orgName) &&
+        Objects.equals(this.orgSealImageBase64, company.orgSealImageBase64) &&
         Objects.equals(this.recipientIndex, company.recipientIndex) &&
         Objects.equals(this.smsNotice, company.smsNotice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailNotice, linksignUserId, orgAuthorizerEmail, orgAuthorizerIdcardNumber, orgAuthorizerIdcardType, orgAuthorizerName, orgAuthorizerPhone, orgIdcardNumber, orgIdcardType, orgName, recipientIndex, smsNotice);
+    return Objects.hash(authorizationLetterImageBase64, bankAccountNumber, bankLocation, bankName, emailNotice, linksignUserId, orgAuthorizerEmail, orgAuthorizerIdcardImageBase64, orgAuthorizerIdcardNumber, orgAuthorizerIdcardType, orgAuthorizerName, orgAuthorizerPhone, orgIdcardImageBase64, orgIdcardNumber, orgIdcardType, orgName, orgSealImageBase64, recipientIndex, smsNotice);
   }
 
   @Override
@@ -278,16 +412,23 @@ public class Company   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Company {\n");
     
+    sb.append("    authorizationLetterImageBase64: ").append(toIndentedString(authorizationLetterImageBase64)).append("\n");
+    sb.append("    bankAccountNumber: ").append(toIndentedString(bankAccountNumber)).append("\n");
+    sb.append("    bankLocation: ").append(toIndentedString(bankLocation)).append("\n");
+    sb.append("    bankName: ").append(toIndentedString(bankName)).append("\n");
     sb.append("    emailNotice: ").append(toIndentedString(emailNotice)).append("\n");
     sb.append("    linksignUserId: ").append(toIndentedString(linksignUserId)).append("\n");
     sb.append("    orgAuthorizerEmail: ").append(toIndentedString(orgAuthorizerEmail)).append("\n");
+    sb.append("    orgAuthorizerIdcardImageBase64: ").append(toIndentedString(orgAuthorizerIdcardImageBase64)).append("\n");
     sb.append("    orgAuthorizerIdcardNumber: ").append(toIndentedString(orgAuthorizerIdcardNumber)).append("\n");
     sb.append("    orgAuthorizerIdcardType: ").append(toIndentedString(orgAuthorizerIdcardType)).append("\n");
     sb.append("    orgAuthorizerName: ").append(toIndentedString(orgAuthorizerName)).append("\n");
     sb.append("    orgAuthorizerPhone: ").append(toIndentedString(orgAuthorizerPhone)).append("\n");
+    sb.append("    orgIdcardImageBase64: ").append(toIndentedString(orgIdcardImageBase64)).append("\n");
     sb.append("    orgIdcardNumber: ").append(toIndentedString(orgIdcardNumber)).append("\n");
     sb.append("    orgIdcardType: ").append(toIndentedString(orgIdcardType)).append("\n");
     sb.append("    orgName: ").append(toIndentedString(orgName)).append("\n");
+    sb.append("    orgSealImageBase64: ").append(toIndentedString(orgSealImageBase64)).append("\n");
     sb.append("    recipientIndex: ").append(toIndentedString(recipientIndex)).append("\n");
     sb.append("    smsNotice: ").append(toIndentedString(smsNotice)).append("\n");
     sb.append("}");

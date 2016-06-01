@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u7B7E\u7F72\u4F4D\u7F6E\u4FE1\u606F")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class SignHere   {
   
   private String documentIndex = null;
@@ -87,14 +87,14 @@ public class SignHere   {
 
   
   /**
-   * \u7B7E\u7F72\u4EBA\u7D22\u5F15
+   * \u7B7E\u7F72\u4EBA(Company)\u7D22\u5F15
    **/
   public SignHere recipientIndex(String recipientIndex) {
     this.recipientIndex = recipientIndex;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "\u7B7E\u7F72\u4EBA\u7D22\u5F15")
+  @ApiModelProperty(example = "null", value = "\u7B7E\u7F72\u4EBA(Company)\u7D22\u5F15")
   @JsonProperty("recipientIndex")
   public String getRecipientIndex() {
     return recipientIndex;

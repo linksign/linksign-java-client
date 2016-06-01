@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u7B7E\u7F72\u65F6\u95F4\u4FE1\u606F")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class SignDateTime   {
   
   private String dateTimePattern = null;
@@ -20,7 +20,8 @@ public class SignDateTime   {
   private String fontName = null;
   private Float fontSize = null;
   private Integer pageNumber = null;
-  private String recipientIndex = null;
+  private String recipientCompanyIndex = null;
+  private String recipientPersonalIndex = null;
   private String templateDateFieldId = null;
   private Integer width = null;
   private Integer xPosition = null;
@@ -118,20 +119,38 @@ public class SignDateTime   {
 
   
   /**
-   * \u7B7E\u7F72\u4EBA\u7D22\u5F15\u53F7
+   * \u5E94\u7528\u7CFB\u7EDF\u4E2D\u7684\u7B7E\u7F72\u4EBA\uFF08\u516C\u53F8\uFF09\u552F\u4E00\u7D22\u5F15\u53F7
    **/
-  public SignDateTime recipientIndex(String recipientIndex) {
-    this.recipientIndex = recipientIndex;
+  public SignDateTime recipientCompanyIndex(String recipientCompanyIndex) {
+    this.recipientCompanyIndex = recipientCompanyIndex;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "\u7B7E\u7F72\u4EBA\u7D22\u5F15\u53F7")
-  @JsonProperty("recipientIndex")
-  public String getRecipientIndex() {
-    return recipientIndex;
+  @ApiModelProperty(example = "null", value = "\u5E94\u7528\u7CFB\u7EDF\u4E2D\u7684\u7B7E\u7F72\u4EBA\uFF08\u516C\u53F8\uFF09\u552F\u4E00\u7D22\u5F15\u53F7")
+  @JsonProperty("recipientCompanyIndex")
+  public String getRecipientCompanyIndex() {
+    return recipientCompanyIndex;
   }
-  public void setRecipientIndex(String recipientIndex) {
-    this.recipientIndex = recipientIndex;
+  public void setRecipientCompanyIndex(String recipientCompanyIndex) {
+    this.recipientCompanyIndex = recipientCompanyIndex;
+  }
+
+  
+  /**
+   * \u5E94\u7528\u7CFB\u7EDF\u4E2D\u7684\u7B7E\u7F72\u4EBA\uFF08\u4E2A\u4EBA\uFF09\u552F\u4E00\u7D22\u5F15\u53F7
+   **/
+  public SignDateTime recipientPersonalIndex(String recipientPersonalIndex) {
+    this.recipientPersonalIndex = recipientPersonalIndex;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "\u5E94\u7528\u7CFB\u7EDF\u4E2D\u7684\u7B7E\u7F72\u4EBA\uFF08\u4E2A\u4EBA\uFF09\u552F\u4E00\u7D22\u5F15\u53F7")
+  @JsonProperty("recipientPersonalIndex")
+  public String getRecipientPersonalIndex() {
+    return recipientPersonalIndex;
+  }
+  public void setRecipientPersonalIndex(String recipientPersonalIndex) {
+    this.recipientPersonalIndex = recipientPersonalIndex;
   }
 
   
@@ -222,7 +241,8 @@ public class SignDateTime   {
         Objects.equals(this.fontName, signDateTime.fontName) &&
         Objects.equals(this.fontSize, signDateTime.fontSize) &&
         Objects.equals(this.pageNumber, signDateTime.pageNumber) &&
-        Objects.equals(this.recipientIndex, signDateTime.recipientIndex) &&
+        Objects.equals(this.recipientCompanyIndex, signDateTime.recipientCompanyIndex) &&
+        Objects.equals(this.recipientPersonalIndex, signDateTime.recipientPersonalIndex) &&
         Objects.equals(this.templateDateFieldId, signDateTime.templateDateFieldId) &&
         Objects.equals(this.width, signDateTime.width) &&
         Objects.equals(this.xPosition, signDateTime.xPosition) &&
@@ -231,7 +251,7 @@ public class SignDateTime   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateTimePattern, documentIndex, fontName, fontSize, pageNumber, recipientIndex, templateDateFieldId, width, xPosition, yPosition);
+    return Objects.hash(dateTimePattern, documentIndex, fontName, fontSize, pageNumber, recipientCompanyIndex, recipientPersonalIndex, templateDateFieldId, width, xPosition, yPosition);
   }
 
   @Override
@@ -244,7 +264,8 @@ public class SignDateTime   {
     sb.append("    fontName: ").append(toIndentedString(fontName)).append("\n");
     sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    recipientIndex: ").append(toIndentedString(recipientIndex)).append("\n");
+    sb.append("    recipientCompanyIndex: ").append(toIndentedString(recipientCompanyIndex)).append("\n");
+    sb.append("    recipientPersonalIndex: ").append(toIndentedString(recipientPersonalIndex)).append("\n");
     sb.append("    templateDateFieldId: ").append(toIndentedString(templateDateFieldId)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

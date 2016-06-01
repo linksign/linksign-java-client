@@ -12,12 +12,30 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u5370\u7AE0\u7ED3\u679C")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class SealSummary   {
   
+  private String imagePngBase64 = null;
   private String sealFileUri = null;
   private String sealId = null;
   private String sealerRedirectUri = null;
+
+  
+  /**
+   **/
+  public SealSummary imagePngBase64(String imagePngBase64) {
+    this.imagePngBase64 = imagePngBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("imagePngBase64")
+  public String getImagePngBase64() {
+    return imagePngBase64;
+  }
+  public void setImagePngBase64(String imagePngBase64) {
+    this.imagePngBase64 = imagePngBase64;
+  }
 
   
   /**
@@ -84,14 +102,15 @@ public class SealSummary   {
       return false;
     }
     SealSummary sealSummary = (SealSummary) o;
-    return Objects.equals(this.sealFileUri, sealSummary.sealFileUri) &&
+    return Objects.equals(this.imagePngBase64, sealSummary.imagePngBase64) &&
+        Objects.equals(this.sealFileUri, sealSummary.sealFileUri) &&
         Objects.equals(this.sealId, sealSummary.sealId) &&
         Objects.equals(this.sealerRedirectUri, sealSummary.sealerRedirectUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sealFileUri, sealId, sealerRedirectUri);
+    return Objects.hash(imagePngBase64, sealFileUri, sealId, sealerRedirectUri);
   }
 
   @Override
@@ -99,6 +118,7 @@ public class SealSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SealSummary {\n");
     
+    sb.append("    imagePngBase64: ").append(toIndentedString(imagePngBase64)).append("\n");
     sb.append("    sealFileUri: ").append(toIndentedString(sealFileUri)).append("\n");
     sb.append("    sealId: ").append(toIndentedString(sealId)).append("\n");
     sb.append("    sealerRedirectUri: ").append(toIndentedString(sealerRedirectUri)).append("\n");

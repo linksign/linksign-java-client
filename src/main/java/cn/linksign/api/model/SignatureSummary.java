@@ -9,12 +9,30 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class SignatureSummary   {
   
+  private String imagePngBase64 = null;
   private String signatureFileUri = null;
   private String signatureId = null;
   private String signerRedirectUri = null;
+
+  
+  /**
+   **/
+  public SignatureSummary imagePngBase64(String imagePngBase64) {
+    this.imagePngBase64 = imagePngBase64;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("imagePngBase64")
+  public String getImagePngBase64() {
+    return imagePngBase64;
+  }
+  public void setImagePngBase64(String imagePngBase64) {
+    this.imagePngBase64 = imagePngBase64;
+  }
 
   
   /**
@@ -78,14 +96,15 @@ public class SignatureSummary   {
       return false;
     }
     SignatureSummary signatureSummary = (SignatureSummary) o;
-    return Objects.equals(this.signatureFileUri, signatureSummary.signatureFileUri) &&
+    return Objects.equals(this.imagePngBase64, signatureSummary.imagePngBase64) &&
+        Objects.equals(this.signatureFileUri, signatureSummary.signatureFileUri) &&
         Objects.equals(this.signatureId, signatureSummary.signatureId) &&
         Objects.equals(this.signerRedirectUri, signatureSummary.signerRedirectUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(signatureFileUri, signatureId, signerRedirectUri);
+    return Objects.hash(imagePngBase64, signatureFileUri, signatureId, signerRedirectUri);
   }
 
   @Override
@@ -93,6 +112,7 @@ public class SignatureSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureSummary {\n");
     
+    sb.append("    imagePngBase64: ").append(toIndentedString(imagePngBase64)).append("\n");
     sb.append("    signatureFileUri: ").append(toIndentedString(signatureFileUri)).append("\n");
     sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
     sb.append("    signerRedirectUri: ").append(toIndentedString(signerRedirectUri)).append("\n");

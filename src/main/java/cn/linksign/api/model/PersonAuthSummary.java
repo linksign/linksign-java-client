@@ -10,56 +10,56 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
-public class SignerStatus   {
+public class PersonAuthSummary   {
   
-  private String recipientIndex = null;
-  private String signerUri = null;
+  private String personId = null;
+  private String redirectUri = null;
   private String status = null;
 
   
   /**
    **/
-  public SignerStatus recipientIndex(String recipientIndex) {
-    this.recipientIndex = recipientIndex;
+  public PersonAuthSummary personId(String personId) {
+    this.personId = personId;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("recipientIndex")
-  public String getRecipientIndex() {
-    return recipientIndex;
+  @JsonProperty("personId")
+  public String getPersonId() {
+    return personId;
   }
-  public void setRecipientIndex(String recipientIndex) {
-    this.recipientIndex = recipientIndex;
+  public void setPersonId(String personId) {
+    this.personId = personId;
   }
 
   
   /**
    **/
-  public SignerStatus signerUri(String signerUri) {
-    this.signerUri = signerUri;
+  public PersonAuthSummary redirectUri(String redirectUri) {
+    this.redirectUri = redirectUri;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("signerUri")
-  public String getSignerUri() {
-    return signerUri;
+  @JsonProperty("redirectUri")
+  public String getRedirectUri() {
+    return redirectUri;
   }
-  public void setSignerUri(String signerUri) {
-    this.signerUri = signerUri;
+  public void setRedirectUri(String redirectUri) {
+    this.redirectUri = redirectUri;
   }
 
   
   /**
-   * signature status(signing,signed)
+   * 4000/4001/4002/5000/...
    **/
-  public SignerStatus status(String status) {
+  public PersonAuthSummary status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "signature status(signing,signed)")
+  @ApiModelProperty(example = "null", value = "4000/4001/4002/5000/...")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -78,24 +78,24 @@ public class SignerStatus   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignerStatus signerStatus = (SignerStatus) o;
-    return Objects.equals(this.recipientIndex, signerStatus.recipientIndex) &&
-        Objects.equals(this.signerUri, signerStatus.signerUri) &&
-        Objects.equals(this.status, signerStatus.status);
+    PersonAuthSummary personAuthSummary = (PersonAuthSummary) o;
+    return Objects.equals(this.personId, personAuthSummary.personId) &&
+        Objects.equals(this.redirectUri, personAuthSummary.redirectUri) &&
+        Objects.equals(this.status, personAuthSummary.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(recipientIndex, signerUri, status);
+    return Objects.hash(personId, redirectUri, status);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SignerStatus {\n");
+    sb.append("class PersonAuthSummary {\n");
     
-    sb.append("    recipientIndex: ").append(toIndentedString(recipientIndex)).append("\n");
-    sb.append("    signerUri: ").append(toIndentedString(signerUri)).append("\n");
+    sb.append("    personId: ").append(toIndentedString(personId)).append("\n");
+    sb.append("    redirectUri: ").append(toIndentedString(redirectUri)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();

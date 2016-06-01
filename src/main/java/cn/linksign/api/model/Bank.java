@@ -10,25 +10,25 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
-public class SignatureFile   {
+public class Bank   {
   
-  private String imagePngBase64 = null;
+  private String verifyAmount = null;
 
   
   /**
    **/
-  public SignatureFile imagePngBase64(String imagePngBase64) {
-    this.imagePngBase64 = imagePngBase64;
+  public Bank verifyAmount(String verifyAmount) {
+    this.verifyAmount = verifyAmount;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("imagePngBase64")
-  public String getImagePngBase64() {
-    return imagePngBase64;
+  @JsonProperty("verifyAmount")
+  public String getVerifyAmount() {
+    return verifyAmount;
   }
-  public void setImagePngBase64(String imagePngBase64) {
-    this.imagePngBase64 = imagePngBase64;
+  public void setVerifyAmount(String verifyAmount) {
+    this.verifyAmount = verifyAmount;
   }
 
   
@@ -41,21 +41,21 @@ public class SignatureFile   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignatureFile signatureFile = (SignatureFile) o;
-    return Objects.equals(this.imagePngBase64, signatureFile.imagePngBase64);
+    Bank bank = (Bank) o;
+    return Objects.equals(this.verifyAmount, bank.verifyAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imagePngBase64);
+    return Objects.hash(verifyAmount);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SignatureFile {\n");
+    sb.append("class Bank {\n");
     
-    sb.append("    imagePngBase64: ").append(toIndentedString(imagePngBase64)).append("\n");
+    sb.append("    verifyAmount: ").append(toIndentedString(verifyAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -20,7 +20,7 @@ import java.util.List;
  **/
 
 @ApiModel(description = "\u7B7E\u7F72\u6587\u6863\u5B9A\u4E49")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-27T12:09:06.290+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
 public class DocumentDefinition   {
   
   private App app = null;
