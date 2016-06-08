@@ -48,7 +48,7 @@ public class SDKUnitTests {
 	  //LinkSign Client API cert  
 	  private static String keyPassword = "";
 	  //LinkSign Client API    Cert PIN
-	  private static String keyPath = System.getProperty("user.dir") +"/res/LinkSignClientAPI.pfx";
+	  private static String keyPath = System.getProperty("user.dir") +"/res/LinksignClientAPI.pfx";
 	  private static String testPdf = System.getProperty("user.dir") +"/res/sample.pdf";
 	  private static String testSeal = System.getProperty("user.dir") +"/res/sample.bmp";
 	  private static String testHtml =  System.getProperty("user.dir") +"/res/sample.html";
@@ -289,9 +289,9 @@ public class SDKUnitTests {
 		//公司签名区域
 		signHere.setRecipientIndex("1");//签署人索引号，对应上面的单位索引号
 		signHere.setTemplateSealFieldId("Signature3");
-		signHere.setTemplateSignatureFieldId("Signature4");
-		signHere.setSealId("739665095193264128");
-		signHere.setSignatureId("733563068365144064");
+//		signHere.setTemplateSignatureFieldId("Signature4");
+		signHere.setSealId("740449583942860800");//需调用采集印章接口提前生成
+//		signHere.setSignatureId("733563068365144064");//需调用采集签名接口提前生成
 		signHereTabs.add(signHere);
 
  
