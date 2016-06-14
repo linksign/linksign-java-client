@@ -1,6 +1,8 @@
 package cn.linksign.api.model;
 
 import java.util.Objects;
+import cn.linksign.api.model.App;
+import cn.linksign.api.model.Personal;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,25 +12,43 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
-public class SignatureFile   {
+public class PersonAuth   {
   
-  private String imagePngBase64 = null;
+  private App app = null;
+  private Personal personal = null;
 
   
   /**
    **/
-  public SignatureFile imagePngBase64(String imagePngBase64) {
-    this.imagePngBase64 = imagePngBase64;
+  public PersonAuth app(App app) {
+    this.app = app;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("imagePngBase64")
-  public String getImagePngBase64() {
-    return imagePngBase64;
+  @JsonProperty("app")
+  public App getApp() {
+    return app;
   }
-  public void setImagePngBase64(String imagePngBase64) {
-    this.imagePngBase64 = imagePngBase64;
+  public void setApp(App app) {
+    this.app = app;
+  }
+
+  
+  /**
+   **/
+  public PersonAuth personal(Personal personal) {
+    this.personal = personal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("personal")
+  public Personal getPersonal() {
+    return personal;
+  }
+  public void setPersonal(Personal personal) {
+    this.personal = personal;
   }
 
   
@@ -41,21 +61,23 @@ public class SignatureFile   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignatureFile signatureFile = (SignatureFile) o;
-    return Objects.equals(this.imagePngBase64, signatureFile.imagePngBase64);
+    PersonAuth personAuth = (PersonAuth) o;
+    return Objects.equals(this.app, personAuth.app) &&
+        Objects.equals(this.personal, personAuth.personal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imagePngBase64);
+    return Objects.hash(app, personal);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SignatureFile {\n");
+    sb.append("class PersonAuth {\n");
     
-    sb.append("    imagePngBase64: ").append(toIndentedString(imagePngBase64)).append("\n");
+    sb.append("    app: ").append(toIndentedString(app)).append("\n");
+    sb.append("    personal: ").append(toIndentedString(personal)).append("\n");
     sb.append("}");
     return sb.toString();
   }

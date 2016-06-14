@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u90AE\u4EF6\u63A5\u6536\u8005\u4FE1\u606F")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
 public class EmailRecipient   {
   
   private String bcc = null;

@@ -2,8 +2,8 @@ package cn.linksign.api.web;
 
 import com.sun.jersey.api.client.GenericType;
 
-import cn.linksign.client.ApiException;
 import cn.linksign.client.ApiClient;
+import cn.linksign.client.ApiException;
 import cn.linksign.client.Configuration;
 import cn.linksign.client.Pair;
 
@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class cn.linksign.codegen.languages.JavaClientCodegen", date = "2016-05-23T16:43:40.996+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T14:36:43.079+08:00")
 public class SignatureApi {
   private ApiClient apiClient;
 
@@ -70,7 +70,7 @@ public class SignatureApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -125,7 +125,7 @@ public class SignatureApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

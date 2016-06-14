@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "\u81EA\u5B9A\u4E49\u5B57\u6BB5")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
 public class TextCustomField   {
   
   private String fieldId = null;

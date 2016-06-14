@@ -22,6 +22,8 @@ import cn.linksign.api.model.DocumentDefinition;
 import cn.linksign.api.model.DocumentStatus;
 import cn.linksign.api.model.DocumentSummary;
 import cn.linksign.api.model.ImageCustomField;
+import cn.linksign.api.model.PersonAuth;
+import cn.linksign.api.model.PersonAuthSummary;
 import cn.linksign.api.model.Personal;
 import cn.linksign.api.model.Seal;
 import cn.linksign.api.model.SealSummary;
@@ -34,6 +36,7 @@ import cn.linksign.api.model.TextCustomField;
 import cn.linksign.api.web.DocumentApi;
 import cn.linksign.api.web.SealApi;
 import cn.linksign.api.web.SignatureApi;
+import cn.linksign.api.web.UserApi;
 import cn.linksign.client.ApiClient;
 import cn.linksign.client.ApiException;
 import cn.linksign.client.Configuration;
@@ -43,10 +46,11 @@ import com.migcomponents.migbase64.Base64;
 
 public class SDKUnitTests {
 	
+	
 	//LinkSign ClientId
-	private static String clientId = "";
+	private static String clientId = "xxxx";
 	  //LinkSign Client API cert  
-	  private static String keyPassword = "";
+	  private static String keyPassword = "xxxx";
 	  //LinkSign Client API    Cert PIN
 	  private static String keyPath = System.getProperty("user.dir") +"/res/LinksignClientAPI.pfx";
 	  private static String testPdf = System.getProperty("user.dir") +"/res/sample.pdf";
@@ -376,6 +380,60 @@ public class SDKUnitTests {
 		Assert.assertNotNull(documentStatus.getStatus());
 		System.out.println(documentStatus.getStatus());
 		System.out.println(documentStatus.getCompanySignerStatus().get(0).getStatus());
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Assert.assertEquals(null, e);
+		}
+    }
+    
+    @Test
+    public void CreatePersonAuth()
+    {
+    	ApiClient apiClient = new ApiClient(keyPath, keyPassword);
+		apiClient.setBasePath("https://api.linksign.cn:443/v1");
+		Configuration.setDefaultApiClient(apiClient);
+		UserApi resApi = new UserApi();
+		try {
+			PersonAuth body = new PersonAuth();
+			App app = new App();
+			app.setRedirectUri("https://www.linksign.cn");
+			body.setApp(app);
+			
+			Personal personal = new Personal();
+			personal.setPersonName("林XX");//姓名（必填）
+			personal.setPersonIdcardNumber("44XXXXXXXXXXXXXX");//身份证（必填）
+			body.setPersonal(personal);
+			
+			PersonAuthSummary personAuthSummary = resApi.createPersonAuth(clientId, body);
+			System.out.println(personAuthSummary.getPersonId());//认证用户编号
+			System.out.println(personAuthSummary.getRedirectUri());//领签认证链接
+			System.out.println(personAuthSummary.getWechatStatus());//微信认证状态
+			System.out.println(personAuthSummary.getBankingStatus());//银行认证状态
+
+		} catch (ApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Assert.assertEquals(null, e);
+		}
+    }
+    
+    @Test
+    public void GetPersonAuthStatus()
+    {
+    	ApiClient apiClient = new ApiClient(keyPath, keyPassword);
+		apiClient.setBasePath("https://api.linksign.cn:443/v1");
+		Configuration.setDefaultApiClient(apiClient);
+		UserApi resApi = new UserApi();
+		try {
+			  
+			String personId = "xxxxxx";
+			PersonAuthSummary personAuthSummary = resApi.getPersonAuthStatus(clientId, personId);
+			System.out.println(personAuthSummary.getPersonId());//认证用户编号
+			System.out.println(personAuthSummary.getRedirectUri());//领签认证链接
+			System.out.println(personAuthSummary.getWechatStatus());//微信认证状态
+			System.out.println(personAuthSummary.getBankingStatus());//银行认证状态
+
 		} catch (ApiException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

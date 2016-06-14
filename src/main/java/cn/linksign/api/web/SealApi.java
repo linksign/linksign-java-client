@@ -2,27 +2,22 @@ package cn.linksign.api.web;
 
 import com.sun.jersey.api.client.GenericType;
 
- 
-
-
-
-
+import cn.linksign.client.ApiClient;
+import cn.linksign.client.ApiException;
+import cn.linksign.client.Configuration;
+import cn.linksign.client.Pair;
 
 import cn.linksign.api.model.SealSummary;
 import cn.linksign.api.model.ApiError;
 import cn.linksign.api.model.Seal;
 import cn.linksign.api.model.SealFile;
-import cn.linksign.client.ApiClient;
-import cn.linksign.client.ApiException;
-import cn.linksign.client.Configuration;
-import cn.linksign.client.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-23T16:43:40.996+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T14:36:43.079+08:00")
 public class SealApi {
   private ApiClient apiClient;
 
@@ -75,7 +70,7 @@ public class SealApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -130,7 +125,7 @@ public class SealApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

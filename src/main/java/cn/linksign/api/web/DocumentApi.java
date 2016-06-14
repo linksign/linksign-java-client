@@ -1,27 +1,23 @@
 package cn.linksign.api.web;
 
 import com.sun.jersey.api.client.GenericType;
- 
 
-
-
-
+import cn.linksign.client.ApiClient;
+import cn.linksign.client.ApiException;
+import cn.linksign.client.Configuration;
+import cn.linksign.client.Pair;
 
 import cn.linksign.api.model.DocumentSummary;
 import cn.linksign.api.model.DocumentDefinition;
 import cn.linksign.api.model.ApiError;
 import cn.linksign.api.model.DocumentStatus;
-import cn.linksign.client.ApiClient;
-import cn.linksign.client.ApiException;
-import cn.linksign.client.Configuration;
-import cn.linksign.client.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-23T16:43:40.996+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T17:06:42.130+08:00")
 public class DocumentApi {
   private ApiClient apiClient;
 
@@ -74,7 +70,7 @@ public class DocumentApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -129,7 +125,7 @@ public class DocumentApi {
     
 
     final String[] localVarAccepts = {
-      "application/pdf"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -147,7 +143,7 @@ public class DocumentApi {
   }
   
   /**
-   * getDocumentStatusGet
+   * \u83B7\u53D6\u6587\u4EF6\u7B7E\u7F72\u72B6\u6001\u3001URI
    * 
    * @param clientId  (required)
    * @param documentId  (required)
@@ -184,7 +180,7 @@ public class DocumentApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

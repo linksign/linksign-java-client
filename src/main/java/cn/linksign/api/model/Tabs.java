@@ -16,7 +16,7 @@ import java.util.List;
  **/
 
 @ApiModel(description = "\u7B7E\u7F72\u76F8\u5173\u4FE1\u606F")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
 public class Tabs   {
   
   private List<SignDateTime> dateTabs = new ArrayList<SignDateTime>();

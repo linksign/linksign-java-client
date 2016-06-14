@@ -9,12 +9,31 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
 public class PersonAuthSummary   {
   
+  private String bankingStatus = null;
   private String personId = null;
   private String redirectUri = null;
-  private String status = null;
+  private String wechatStatus = null;
+
+  
+  /**
+   * pending/fail/success
+   **/
+  public PersonAuthSummary bankingStatus(String bankingStatus) {
+    this.bankingStatus = bankingStatus;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "pending/fail/success")
+  @JsonProperty("bankingStatus")
+  public String getBankingStatus() {
+    return bankingStatus;
+  }
+  public void setBankingStatus(String bankingStatus) {
+    this.bankingStatus = bankingStatus;
+  }
 
   
   /**
@@ -52,20 +71,20 @@ public class PersonAuthSummary   {
 
   
   /**
-   * 4000/4001/4002/5000/...
+   * pending/fail/success
    **/
-  public PersonAuthSummary status(String status) {
-    this.status = status;
+  public PersonAuthSummary wechatStatus(String wechatStatus) {
+    this.wechatStatus = wechatStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "4000/4001/4002/5000/...")
-  @JsonProperty("status")
-  public String getStatus() {
-    return status;
+  @ApiModelProperty(example = "null", value = "pending/fail/success")
+  @JsonProperty("wechatStatus")
+  public String getWechatStatus() {
+    return wechatStatus;
   }
-  public void setStatus(String status) {
-    this.status = status;
+  public void setWechatStatus(String wechatStatus) {
+    this.wechatStatus = wechatStatus;
   }
 
   
@@ -79,14 +98,15 @@ public class PersonAuthSummary   {
       return false;
     }
     PersonAuthSummary personAuthSummary = (PersonAuthSummary) o;
-    return Objects.equals(this.personId, personAuthSummary.personId) &&
+    return Objects.equals(this.bankingStatus, personAuthSummary.bankingStatus) &&
+        Objects.equals(this.personId, personAuthSummary.personId) &&
         Objects.equals(this.redirectUri, personAuthSummary.redirectUri) &&
-        Objects.equals(this.status, personAuthSummary.status);
+        Objects.equals(this.wechatStatus, personAuthSummary.wechatStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(personId, redirectUri, status);
+    return Objects.hash(bankingStatus, personId, redirectUri, wechatStatus);
   }
 
   @Override
@@ -94,9 +114,10 @@ public class PersonAuthSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PersonAuthSummary {\n");
     
+    sb.append("    bankingStatus: ").append(toIndentedString(bankingStatus)).append("\n");
     sb.append("    personId: ").append(toIndentedString(personId)).append("\n");
     sb.append("    redirectUri: ").append(toIndentedString(redirectUri)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    wechatStatus: ").append(toIndentedString(wechatStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

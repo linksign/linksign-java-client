@@ -17,7 +17,7 @@ import java.util.List;
  **/
 
 @ApiModel(description = "\u5176\u5B83\u63A5\u6536\u4EBA")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-01T19:09:22.461+08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-06-13T18:34:09.191+08:00")
 public class ExtraRecipients   {
   
   private List<EmailRecipient> emaiRecipients = new ArrayList<EmailRecipient>();
